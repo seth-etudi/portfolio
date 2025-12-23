@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg-dark: #0a0f0d;
+  --color-bg-darker: #050807;
+  --color-emerald-glow: rgba(16, 185, 129, 0.2);
+  --color-emerald-bright: #10b981;
+  --color-emerald-dark: #047857;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: var(--color-bg-dark);
+  color: #e5e7eb;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-emerald-dark);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-emerald-bright);
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-emerald-glow);
+  color: var(--color-emerald-bright);
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glow effects */
+.glow-text {
+  text-shadow: 0 0 10px var(--color-emerald-glow),
+               0 0 20px var(--color-emerald-glow),
+               0 0 30px var(--color-emerald-glow);
+}
+
+.glow-border {
+  box-shadow: 0 0 10px var(--color-emerald-glow),
+              0 0 20px var(--color-emerald-glow);
+}
+
+/* Terminal cursor */
+.terminal-cursor::after {
+  content: '▊';
+  animation: blink 1s infinite;
+  color: var(--color-emerald-bright);
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
