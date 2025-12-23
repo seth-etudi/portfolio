@@ -56,7 +56,7 @@ const Hero = () => {
               >
                 <div className="ml-4">
                   <h1 className="text-4xl md:text-5xl font-bold text-emerald-500 mb-2 glow-text">
-                    Your Name Here
+                    Seth Etudi
                   </h1>
                   <p className="text-xl text-gray-400 mb-4">
                     <span className="text-emerald-500">{'>'}</span> Cybersecurity Enthusiast & Software Engineer

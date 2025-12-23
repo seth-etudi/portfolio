@@ -1,1 +1,1 @@
-Seth Etudi's Potfolio
+Seth Etudi's Portfolio
